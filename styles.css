@@ -155,7 +155,11 @@ header.in-view{
 }
 
 /* */
+.img-responsive.mobile {
+  display: none;
+}
 
+ 
 .hero {
   display: flex;
   flex-direction: column;
@@ -176,6 +180,9 @@ header.in-view{
   line-height: 0.9;*/
   font-size: 12vh;
   font-weight: bold;
+}
+.email-input-container{
+  margin-right: 20px;
 }
 
 @media only screen and (min-width: 32em) {
@@ -328,7 +335,10 @@ header.in-view{
   margin-right: 20px;
 }
 .contact-text{
-      align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     width: 30%;
 }
 .ourWork1{
@@ -399,9 +409,9 @@ font-size: 20px;
 .flex-space-between{
   justify-content: space-between;
 }
-.email-input, .phone-input{
-flex : 1 1 45%;
-}
+  .email-input, .phone-input{
+  flex : 1 1 45%;
+  }
 
 .socialmedia-container {
    /*margin-top: 10px;*/
@@ -416,6 +426,20 @@ flex : 1 1 45%;
   margin-right: 30px;
   margin-top: 20px;
   
+}
+.icon-footer{
+  margin-top: 10px;
+  
+}
+.icon-footer img{
+  margin-right: 10px;
+}
+.send-btn{
+  font-size: 20px;
+  width: 120px;
+}
+.team-name{
+  font-size: 24px;
 }
 /*the responsive code start */
 
@@ -505,7 +529,22 @@ flex : 1 1 45%;
 /*.client-img-1{
       padding-right: 5px;
 }*/
-
+.socialmedia-container {
+   margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.email-input, .phone-input {
+    width: 100%;
+   flex: 1 1 100%;
+}
+.email-input-container{
+  width: 100%;
+  margin-right: 0px;
+}
+.phone-input-container{
+  width: 100%;
+}
 }
 /* 
   ##Device = Tablets, Ipads (portrait)
@@ -557,6 +596,13 @@ flex : 1 1 45%;
 }
   
 }
-
+@media only screen and (max-device-width: 480px) {
+  .img-responsive {
+    display: none;
+  }
+  .img-responsive.mobile {
+    display: block;
+  }
+}
 
  /*the responsive code end*/
