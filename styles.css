@@ -103,7 +103,7 @@ header.in-view{
       border: none;
       font-weight: 600;
       color: #fff;
-    height: 2em;
+      font-size: 18px;
     width: auto;
     cursor: pointer;
 }
@@ -119,6 +119,17 @@ header.in-view{
     overflow-x: hidden;
     transition: 0.5s;
 }
+.client-img-1{
+  /*display: flex;
+  flex-direction: column;
+  background: url("img/Clientspeak1.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  */
+ 
+  }
 
 .overlay-content {
     position: absolute;
@@ -171,6 +182,7 @@ header.in-view{
   background: url("") center center no-repeat;
   background-size: cover;
 }
+
 
 .hero-title {
   max-width: 16em;
@@ -372,6 +384,23 @@ width: 100%;
 height: auto;
 
 }
+.client-img-1{
+  position: relative;
+  text-align: center;
+  z-index: -1;
+}
+.clientImg-text {
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    width: 50%;
+    text-align: left;
+    overflow: hidden;
+}
+.clientImg-text  p{
+  margin: 0;
+  padding: 0;
+}
 .otherClients > div{
   flex: 1 1 0;
   margin-right: 5px;
@@ -441,6 +470,62 @@ font-size: 20px;
 .team-name{
   font-size: 24px;
 }
+/* gallery modal  start*/
+.modal-logo-container{
+  padding:10px;
+  margin-bottom: 20px;
+}
+.modalContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  
+}
+.close-modal-02, .close-modal-kisan{
+  font-size: 3em;
+  font-weight: 900;
+  cursor: pointer;
+}
+.modal-content{
+  margin-top: 20px;
+}
+.service-title{
+     font-size: 3em;
+}
+.galleryContainer img{
+  position: a;
+  max-width: 100%;
+  height: auto;
+}
+.galleryContainer{
+  /*margin-top: 20px;*/
+}
+.galleryContainer .grid-2img{
+  padding-right: 15px;
+}
+
+
+/* gallery modal  end*/
+/* flex framework start*/
+.flex-grid{
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+.pd-right{
+  padding-right: 15px;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+
+/* flex framework end*/
+
 /*the responsive code start */
 
 @media screen and (max-width: 600px) {
@@ -529,6 +614,7 @@ font-size: 20px;
 /*.client-img-1{
       padding-right: 5px;
 }*/
+
 .socialmedia-container {
    margin-top: 20px;
     font-size: 18px;
@@ -545,7 +631,11 @@ font-size: 20px;
 .phone-input-container{
   width: 100%;
 }
+.flex-grid-thirds .col {
+ width: 100%;
 }
+}
+
 /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
@@ -603,6 +693,22 @@ font-size: 20px;
   .img-responsive.mobile {
     display: block;
   }
+  .clientImg-text{
+    visibility: hidden;
+    
+  }
+  .flex-grid {
+    display: block;
+  }
+  .flex-grid-thirds{
+       display: block;
+  }
+  .flex-grid-thirds .col {
+    width: 100%;
+}
+.galleryContainer .grid-2img{
+  padding-right: 0px;
+}
 }
 
  /*the responsive code end*/
