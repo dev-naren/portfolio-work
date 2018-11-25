@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>-->
     <link rel="stylesheet" href="animate.min.css">
     <script>
         /* Open */
@@ -21,10 +21,10 @@
         function closeNav() {
             document.getElementById("myNav").style.height = "0%";
         }
-        const el = document.querySelector('img');
-        const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
-        observer.observe();
-
+    //     const el = document.querySelector('img');
+    //     const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+    //     observer.observe();
+    //   new WOW().init();
     </script>
 </head>
 
@@ -81,16 +81,22 @@
         <h2 class="blackback-headers">OUR <br> SERVICES </h2>
     </header>
     <div class="flex flex-wrap">
-        <div class="service-tile">
-            Experience <br>Design
+        <div class="service-tile wow slideInLeft">
+           Experience <br>Design 
+            <div class="data">
+                 <p>
+                End to end user experience design, from user research to visual design. We strategically approch problems based on established
+                design methodologies considering business viability, technical feasibility and usability
+                <p>
+            </div>
         </div>
-        <div class="service-tile">
+        <div class="service-tile pr">
             product <br>Design
         </div>
-        <div class="service-tile">
+        <div class="service-tile in">
             Industrial <br>Design
         </div>
-        <div class="service-tile">
+        <div class="service-tile vi">
             Visual <br>Design
         </div>
         <div class="service-tile">
@@ -170,22 +176,22 @@ design methodologies considering business viability, technical feasibility and u
 </div>
 <div class="flex flex-wrap">
     <div class="contact-form">
-        <form method="post" action="">
+        <form name="contact" netlify>
 
-            <div class="form-element"><input class="form-input" type="text" placeholder="Your Name"> </div>
+            <div class="form-element"><input class="form-input" type="text" autocomplete="name" name="name" placeholder="Your Name"> </div>
             <div class="flex flex-wrap form-element" style="width: 100%">
-<div class="email-input-container"><input class="form-input email-input" type="email" placeholder="Email Id"></div>
-<div class="phone-input-container"><input class="form-input phone-input" type="phone" placeholder="Phone"></div>
+<div class="email-input-container"><input autocomplete="email" class="form-input email-input" type="email" name="email" placeholder="Email Id"></div>
+<div class="phone-input-container"><input autocomplete="phone" class="form-input phone-input" type="phone" name="phone" placeholder="Phone"></div>
 </div>
-<div class="form-element"><input class="form-input" type="text" placeholder="Message"> </div>
+<div class="form-element"><input class="form-input" type="text" name="message" placeholder="Message"> </div>
 <button type="submit" class="projectBtn send-btn">SEND</button>
 </form>
 </div>
 <div class="flex flex-column flex-space-between socialmedia-container">
     <div class="flex flex-column flex-space-between socialmedia-container">
         <div> <img alt="email us" src="img/mail_icon.png" /> </div>
-        <div> <label>soumyajit@studiomonochrome.com </label> </div>
-        <div> <label>kishore@studiomonochrome.com </label> </div>
+        <div> <a class="mailLink" href="mailto:soumyajit@studiomonochrome.com"><label>soumyajit@studiomonochrome.com </label> </a></div>
+        <div> <a class="mailLink" href="mailto:kishore@studiomonochrome.com"><label>kishore@studiomonochrome.com </label></a> </div>
     </div>
     <div class="flex flex-column flex-space-between socialmedia-container">
         <div> <img alt="call us" src="img/phone_icon.png" /></div>
@@ -311,7 +317,7 @@ design methodologies considering business viability, technical feasibility and u
                                                                                   $('#logo').attr('src', 'img/logo.JPG');
                                                                               }
                                                                           }
-                                                                          if (header > firstSection) {
+                                                                          if (header > firstSection/2) {
                                                                               if (!$(".header").hasClass("in-view")) {
                                                                                   $(".header").addClass("in-view");
                                                                               }
@@ -325,6 +331,9 @@ design methodologies considering business viability, technical feasibility and u
 </script>
 <script src="animatedModal.min.js"></script>
 <script>
+// $(".service-tile").hover(function () {
+//     $(this).toggleClass("expand-tile");
+// });
                                                                $("#demo02").animatedModal({
                                                                    modalTarget: 'modal-02',
                                                                    animatedIn: 'zoomIn',

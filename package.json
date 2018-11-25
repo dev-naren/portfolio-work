@@ -1,0 +1,19 @@
+{
+  "name": "monochrome",
+  "version": "1.0.0",
+  "description": "Portfolio site for the monochrome studio",
+  "main": "animatedModal.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naren2neo/portfolio-work.git"
+  },
+  "author": "Narender",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naren2neo/portfolio-work/issues"
+  },
+  "homepage": "https://github.com/naren2neo/portfolio-work#readme"
+}

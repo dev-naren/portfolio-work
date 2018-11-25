@@ -88,6 +88,7 @@ header.fixed {
   visibility:hidden;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
   transform:translate(0, -200px);
+  z-index: 10;
 }
 header.fixed nav a, header.fixed .logo a{
   color:#333;
@@ -395,6 +396,7 @@ height: auto;
     right: 0px;
     width: 50%;
     text-align: left;
+    font-size: 2vw;
     overflow: hidden;
 }
 .clientImg-text  p{
@@ -503,6 +505,10 @@ font-size: 20px;
 .galleryContainer .grid-2img{
   padding-right: 15px;
 }
+.mailLink{
+  color: black;
+  text-decoration: none;
+}
 
 
 /* gallery modal  end*/
@@ -523,6 +529,23 @@ font-size: 20px;
 .flex-grid-thirds .col {
   width: 32%;
 }
+.expand-tile{
+     transition: 1s;
+    transform: scale(1);
+    flex: 1 1 100%;
+    /*display: flex;   */
+    height: 200px;
+    justify-content: space-between;
+}
+.data{
+  display: none;
+}
+grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); 
+
+}
+
+
 
 /* flex framework end*/
 
